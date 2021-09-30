@@ -1,0 +1,154 @@
+:root {
+  --body-ff: 'Roboto', sans-serif;
+  --heading-ff: 'Work Sans', sans-serif;
+  --normal-size: 13px;
+
+  --accent-color: #898ba9;
+  --primary-color: rgb(50, 53, 216);
+  --hover-color: #7879f1;
+  --bs: rgba(50, 53, 216, 0.25);
+  --plan-color: #f9f8fe;
+
+  --border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e1e8fd;
+  font-family: var(--body-ff);
+  font-size: var(--normal-size);
+}
+
+.component {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.card {
+  height: 500px;
+  width: 350px;
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card__details {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.card__image > img {
+  width: 350px;
+  height: 176px;
+}
+
+.card__heading {
+  font-family: var(--heading-ff);
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+}
+
+.card__description {
+  font-size: var(--normal-size);
+  color: var(--accent-color);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.card__plan {
+  background: var(--plan-color);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+}
+
+.card__plan > img {
+  width: 36px;
+  height: 36px;
+}
+
+.card__plan-details {
+  transform: translateX(-30%);
+}
+
+.card__plan-duration {
+  font-family: var(--heading-ff);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.card__plan-price {
+  color: var(--accent-color);
+}
+
+.card__plan-change {
+  font-family: var(--heading-ff);
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card__plan-change:hover {
+  color: var(--hover-color);
+}
+
+.card__payment > button {
+  font-weight: 700;
+  color: white;
+  background: var(--primary-color);
+  padding: 10px 45px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 0 15px 15px 1px var(--bs);
+}
+
+.card__payment > button:hover {
+  background: var(--hover-color);
+}
+
+.card__cancel {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.card__cancel:hover {
+  color: black;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  right: 36%;
+}
